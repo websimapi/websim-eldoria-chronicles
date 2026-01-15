@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Eldoria Chronicles</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "marked": "https://esm.sh/marked"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="game-container">
+        <!-- Status Header -->
+        <header class="status-bar">
+            <div class="stat-group">
+                <span id="char-name">Hero</span>
+                <span class="lvl-badge">Lvl <span id="stat-level">1</span></span>
+            </div>
+            <div class="bars">
+                <div class="bar-container hp">
+                    <div class="bar-fill" id="bar-hp" style="width: 100%"></div>
+                    <span class="bar-text">HP: <span id="stat-hp">0</span>/<span id="stat-max-hp">0</span></span>
+                </div>
+                <div class="bar-container mp">
+                    <div class="bar-fill" id="bar-mp" style="width: 100%"></div>
+                    <span class="bar-text">MP: <span id="stat-mp">0</span>/<span id="stat-max-mp">0</span></span>
+                </div>
+            </div>
+            <div class="resources">
+                <span>💰 <span id="stat-gold">0</span></span>
+                <span>📍 <span id="stat-loc">Unknown</span></span>
+            </div>
+        </header>
+
+        <!-- Main Content Card -->
+        <main class="story-card">
+            <div class="scene-image-container">
+                <img src="dungeon_entrance.png" alt="Scene" id="scene-img">
+                <div class="overlay-gradient"></div>
+            </div>
+            
+            <div class="content-scroll">
+                <div id="combat-log" class="hidden"></div>
+                <div id="story-text" class="markdown-body">
+                    Loading world...
+                </div>
+            </div>
+        </main>
+
+        <!-- Interactive Choices -->
+        <footer class="controls">
+            <div id="choices-container">
+                <!-- Buttons injected by JS -->
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
